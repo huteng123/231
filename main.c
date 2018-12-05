@@ -27,10 +27,12 @@ void menu()
    printf("**********************2.删除节点**************************\n");
    printf("**********************3.删除边****************************\n");
    printf("**********************4.添加边****************************\n");
-   printf("**********************5.退出系统**************************\n");
-   printf("                  请输入你的选择（1~5）                   \n");
+   printf("**********************5.添加点****************************\n");
+   printf("**********************6.退出系统**************************\n");
+   printf("                  请输入你的选择（1~6）                    \n");
+   printf(" huteng	\n");
    scanf("%d",&p);
-    if(p<1||p>5)
+    if(p<1||p>6)
 	{printf("\n\n输入序号不属于菜单，请重新输入\n\n");
 	p=6;}
 	switch(p)
@@ -38,9 +40,10 @@ void menu()
 	 case 1:putList();break;      //路由表输出并打印
      case 2:Deletevertex();break;   //删除节点
      case 3:Deleteedge();break;   //删除边
-	 case 4:Insertedge();break;
-	 case 5:exit(0);break;      //退出
-	 case 6:menu();
+	 case 4:Insertedge();break;   //添加边 
+	 case 5:Deletevertex();break;  //添加点 
+	 case 6:exit(0);break;      //退出
+	 case 7:menu();
 	}
 }
 
